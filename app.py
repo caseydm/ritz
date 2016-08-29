@@ -1,7 +1,7 @@
-from robobrowser import RoboBrowser
+import os
 import time
 from datetime import datetime, timedelta
-import os
+from robobrowser import RoboBrowser
 import sendgrid
 from sendgrid.helpers.mail import *
 
@@ -23,7 +23,7 @@ def getSoup(arrive, depart):
 
 
 def parseRates(soup, year):
-    # year passed to append to res date
+    # year passed to append to reservation date
     year = datetime.strptime(year, '%m/%d/%Y')
     year = year.strftime('%Y')
 
@@ -32,7 +32,7 @@ def parseRates(soup, year):
     body = table.find('tbody')
     rows = body.find_all('tr')
 
-    ratesDict = []
+    rates = []
 
     # get values from each cell
     for r in rows:
@@ -41,16 +41,17 @@ def parseRates(soup, year):
             p = c.find('p')
             spans = p.find_all('span')
 
-            # convert date to reader friendly
-            resDate = spans[1].text + spans[2].text + '/' + year  # reservation date
+            # convert date to reader friendly format
+            resDate = spans[1].text + spans[2].text + '/' + year
             resDate = datetime.strptime(resDate, '%m/%d/%Y')
             resDate = resDate.strftime('%A, %b %d')
 
-            price = c.find_all('p')[1].text  # price
-            price = price.strip(' \t\n\r')  # price stripped
-            ratesDict.append({'date': resDate, 'price': price})
+            # reservation cost
+            price = c.find_all('p')[1].text
+            price = price.strip(' \t\n\r')
+            rates.append({'date': resDate, 'price': price})
 
-    return ratesDict
+    return rates
 
 
 def buildDates():
@@ -105,8 +106,6 @@ def emailResults(rates):
     mail = Mail(from_email, subject, to_email, content)
     response = sg.client.mail.send.post(request_body=mail.get())
     print(response.status_code)
-    print(response.body)
-    print(response.headers)
 
 
 # run program
