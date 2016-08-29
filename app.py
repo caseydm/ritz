@@ -1,6 +1,9 @@
 from robobrowser import RoboBrowser
 import time
 from datetime import datetime, timedelta
+import os
+import sendgrid
+from sendgrid.helpers.mail import *
 
 
 def getSoup(arrive, depart):
@@ -80,10 +83,34 @@ def getRates():
         rates += parseRates(soup, d['arrive'])
         time.sleep(2)
 
+    # sort rates by date
+    rates.sort(key=lambda x: datetime.strptime(x['date'], '%A, %b %d'))
+
     return rates
+
+
+def emailResults(rates):
+    # sendgrid setup
+    sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
+
+    # message
+    message = 'Available dates for Ritz Lake Oconee:<br><br>'
+    for rate in rates:
+        message += rate['date'] + ': ' + rate['price'] + '<br>'
+
+    from_email = Email('casey@caseym.me')
+    subject = 'Ritz Hotel Rates'
+    to_email = Email('caseym@gmail.com')
+    content = Content('text/html', message)
+    mail = Mail(from_email, subject, to_email, content)
+    response = sg.client.mail.send.post(request_body=mail.get())
+    print(response.status_code)
+    print(response.body)
+    print(response.headers)
 
 
 # run program
 rates = getRates()
 for rate in rates:
     print(rate['date'], rate['price'])
+emailResults(rates)
