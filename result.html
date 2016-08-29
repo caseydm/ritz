@@ -1,0 +1,1961 @@
+
+<!DOCTYPE html>
+
+<html lang="en-US" xml:lang="en-US" xmlns="http://www.w3.org/1999/xhtml">
+<head> <script src="/common/js/marriottCommon.js" type="text/javascript"> </script>
+<title>Find Hotel Deals and Offers</title>
+<meta content="" name="description"/>
+<meta content="" name="keywords"/>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+<meta content="text/css" http-equiv="Content-Style-Type"/>
+<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+<link href="http://cache.marriott.com/Images/Mobile/MC_Logos/MarriottApple57x57.png" rel="apple-touch-icon"/>
+<meta content="Marriott International" name="application-name"/>
+<meta content="#9D102D" name="msapplication-TileColor"/>
+<meta content="http://cache.marriott.com/Images/Mobile/MC_Logos/MarriottWin8Icon.png" name="msapplication-TileImage"/>
+<meta content="app-id=455004730" name="apple-itunes-app"/>
+<link href="/tools/search/marriott-city-search.xml?log=1" rel="search" title="Marriott Hotel Search by City/Airport Code" type="application/opensearchdescription+xml"/>
+<link href="/tools/search/marriott-keyword-search.xml?log=1" rel="search" title="Marriott Hotel Search by Keyword" type="application/opensearchdescription+xml"/>
+<script type="text/javascript">if(!JAWR){var JAWR = {};};;JAWR.jawr_dwr_path='/dwr';JAWR.dwr_scriptSessionId='6C71A9526CFCA944B7C6455B0DD639D5';JAWR.app_context_path='';</script>
+<link href="/miCSSPath/633072909/bundles/foundation_all.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="/miCSSPath/N2057462482/common/css/rcss/reservations/reservations.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="/miCSSPath/1742038401/common/css/rcss/hws/brands/brands.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="/miCSSPath/N1555775226/common/css/rcss/hws/brands/brands_rz.css" media="all" rel="stylesheet" type="text/css"/>
+<link href="/miCSSPath/945172325/common/css/base/print/marriottPrint.css" media="print" rel="stylesheet" type="text/css"/>
+<!--[if lte IE 9]>
+<link rel="stylesheet" type="text/css" media="screen" href="/miCSSPath/1962074040/common/css/rcss/base/IEOverride.css" />
+
+<![endif]-->
+<script name="global" type="text/mi-context">
+    {
+    	"siteId" : "",     	
+        "siteName": "en",       
+    	"localeKey": "en_US"
+    } 
+</script>
+<input id="akamaiCountryCode" type="hidden" value="US"/>
+<!--[if gt IE 9]><!-->
+<script async="" src="/common/js/webFontPreloader.js" type="text/javascript"></script>
+<!--<![endif]-->
+<script type="text/javascript">if(!JAWR){var JAWR = {};};;JAWR.jawr_dwr_path='/dwr';JAWR.dwr_scriptSessionId='D5B33AE725A88E41E6269877A0BAAC4C';JAWR.app_context_path='';</script>
+<script src="/miJSPath/N1021449670/common/js/libs/modernzr/modernzr.js" type="text/javascript"></script>
+<!--[if gt IE 7]><!-->
+<script src="/miJSPath/469854537/common/js/libs/picturefill/picturefill.min.js" type="text/javascript"></script>
+<!--<![endif]-->
+<!--[if IE 8]>
+	<script type="text/javascript" src="/common/js/libs/polyfills/Object.keys.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+//<!--
+var imgPath = 'http://cache.marriott.com';
+var webfontloads = true;
+//-->
+</script>
+<script>
+var averageDailyRateUSD = '';
+var resTotalUSD = '';
+var lengthOfStay = '';
+/* Average daily rate */
+if (resTotalUSD != '' && lengthOfStay != ''){
+	averageDailyRateUSD = (resTotalUSD / lengthOfStay).toFixed(2);
+}
+
+/*
+ * Determine the current breakpoint and orientation of the window.
+ * Portrait, Landscape or Square
+ */
+	
+	var viewportWidth  = screen.width
+	,viewportHeight = screen.height
+	,viewportDiff = viewportWidth - viewportHeight
+	,viewportOrientation = "Square"
+	,viewportBreakPoint = "1024";
+	
+	if(typeof MI !== "undefined" && typeof MI.breakpoints !== "undefined" && typeof MI.breakpoints.getBreakpoint === "function") {
+	var currentVp = MI.breakpoints.getBreakpoint("screen");
+	if(currentVp != "" && currentVp != null) { viewportBreakPoint = currentVp; }
+}
+
+if(viewportDiff > 0) { viewportOrientation = "Landscape"; }
+else if(viewportDiff < 0) { viewportOrientation = "Portrait"; }
+
+
+if (viewportBreakPoint != '' && viewportOrientation != ''){
+	pageBreakpointOrientation = "Page Loaded on " + viewportBreakPoint + "w: " + viewportOrientation;
+	  
+}	
+	
+//PersonalizationCookie non member control group
+var pers_cookie = decodeURIComponent('%7B%22groupNumber%22%3A17%2C%22globalControlCookieReference%22%3A91%2C%22guid%22%3A%220c18c3ab-a011-47a2-9847-9bf33d6f820b%22%7D');
+var nonMemberCtrlGrp_grpNum = '';
+
+if (pers_cookie != '' && pers_cookie.length > 0)
+{
+	  pers_cookie_json = JSON.parse(pers_cookie);
+      if (pers_cookie_json.groupNumber)
+      {
+       	nonMemberCtrlGrp_grpNum = "g"+pers_cookie_json.groupNumber;
+		  
+      }
+}
+
+var dataLayer = 
+{
+	
+        "search_criteria_changed": "true",
+    
+		"numRooms": "1",
+	
+		"geoCodeLatLong": "33.438987,-83.194186",
+	
+		"clustCode": "GOV",
+	
+		"srchBrands": "all|",
+	
+		"brndCode": "RZ-R",
+	
+		"hotelLoc": "Greensboro,GA,US",
+	
+		"mrshaCode": "ahnrz",
+	
+		"ctrlgrp": "91",
+	
+		"isProd": "true",
+	
+		"domainName": "Marriott.com",
+	
+		"buildVers": "16.08.10 (release/16.08) release-build-503 cf42307011611cdff261496c73193da697eb1bbc",
+	
+		"rewEarnFlag": "true",
+	"ctrl_ad_exclude":"false","ctrl_exp_exclude":"false","ctrl_pers_exclude":"false","ctrl_exp_validation":"true",
+		"ctrl_exp_baseline": "91",
+	
+		"device_ip_address": "70.177.138.81",
+	
+		"page_domain_name": "www.marriott.com",
+	
+		"env_site_id": "US",
+	
+		"page_url_path_branch": "/reservation/availabilityCalendar",
+	
+		"sessionId": "00002JswEJHhkjCjG4znMSfCTIE:173v3jib7",
+		"cookie_jsessionId": "00002JswEJHhkjCjG4znMSfCTIE:173v3jib7",
+	
+		"prop_address_city": "Greensboro",
+	
+		"prop_address_city_state_country": "Greensboro|Georgia|US",
+	
+		"prop_address_state_name": "Georgia",
+	
+		"prop_address_state_abbr": "GA",
+	
+		"prop_address_country_abbr": "US",
+	
+		"prop_brand_code": "RZ-R",
+	
+		"prop_brand_name": "The Ritz-Carlton",
+	
+		"prop_currency_type": "USD",
+	
+		"prop_marsha_code": "ahnrz",
+	
+		"prop_name": "The Ritz-Carlton Reynolds, Lake Oconee",
+	
+		"prop_rewards_program_participant": "true",
+	
+		"res_rooms_per_night": "1",
+	
+		"roomkey_api_key": "a9bc92520c8acea6eadbc930b2ce2874",
+	
+		"roomkey_api_version": "1.5.1",
+	
+		"search_advance_purchase_days": "30",
+	
+		"search_cluster_code": "GOV",
+	
+	    "page_url_query_string": "propertyCode=AHNRZ;propertyCode=AHNRZ;isSearch=false",
+	
+		"device_user_guid": "0c18c3ab-a011-47a2-9847-9bf33d6f820b",
+	
+		"env_tool_ensighten_bluekai": "0c18c3ab-a011-47a2-9847-9bf33d6f820b",
+	
+    	"prof_state": "notAuthenticatedOrRemembered",
+   	
+		"cookie_mvt_global_ctrl": "91",
+	
+		"cookie_mi_visitor": "2JswEJHhkjCjG4znMSfCTIE",
+	
+		"cookie_mi_site": "prod3",
+	
+		"cookie_personalization": "%7B%22groupNumber%22%3A17%2C%22globalControlCookieReference%22%3A91%2C%22guid%22%3A%220c18c3ab-a011-47a2-9847-9bf33d6f820b%22%7D",
+	
+		"res_booking_room_Count": "1",
+	
+		"page_breakpt_orientation": pageBreakpointOrientation,
+	
+		"pers_non_member_ctrl_grp_id": nonMemberCtrlGrp_grpNum,
+    
+		"analytics_onpage_tracking": "false",
+	
+		"page_send_analytics": "false",
+	
+	    "brwsrLang": "en_US"
+    
+	};
+		
+	
+		var datalayerString = 'mr_prof_id_alternate,mr_prof_id_unique,mr_prof_rewards_level,mr_prof_points_balance,mr_prof_address_city,mr_prof_address_state_abbr,mr_prof_address_country_abbr,mr_prof_interests_activity,mr_prof_earning_pref,mr_prof_preferred_program,mr_prof_cc_us_business,mr_prof_cc_us_signature,mr_prof_cc_us_premier,mr_prof_cc_uk_platinum,mr_prof_cc_ca_platinum,mr_prof_cc_us_rcr,mr_prof_cc_ca_premier,mr_cei_SttValSeg,mr_cei_SttBhvSeg,prop_marsha_code,prop_brand_code,prop_name,prop_address_city_state_country,search_list_marsha,search_date_check_in,search_date_check_out,search_cluster_code,search_advance_purchase_days,res_rate_program,res_stay_length,res_payment_type,res_revenue_total_usd,res_room_nights_total,res_confirmation_number,res_revenue_adr_rate_usd,res_rate_lowest_standard,res_cancellation_number,res_rooms_per_night,res_market_code,res_guest_address_postal_code,res_guest_address_country_abbr,group_event_type,group_contract_type,group_rooms_max_num,group_opportuntity_id,env_site_id';
+		var datalayerArr = datalayerString.split(',')
+	            ,DMPdata = {};
+		for(var i = 0; i < datalayerArr.length; i++){
+		      var keyName = datalayerArr[i];
+		      if (typeof(dataLayer[keyName]) != 'undefined') 
+		      {
+		      	DMPdata[keyName] = dataLayer[keyName];
+		      }
+		}
+	
+</script>
+<script src="//assets.adobedtm.com/47ee28f4d4112d7645b7d46ea1f332d162fda9da/satelliteLib-283484f53e7fe7739b04ba64f17edd16a85e594d.js"></script>
+<!-- Determin which env namespace to use in the bootstrap call based page URL -->
+<script>
+				(function() {
+					var ens = document.createElement('script');
+					ens.type = 'text/javascript';
+					ens.async = true;
+					ens.src = 'https://nexus.ensighten.com/marriott/prod/Bootstrap.js';
+					var x = document.getElementsByTagName('script')[0];
+					x.parentNode.insertBefore(ens, x);
+				})();
+			</script>
+<script type="text/javascript">
+					var monetateT = new Date().getTime();
+					(function() {
+					    var p = document.location.protocol;
+					    if (p == "http:" || p == "https:") {
+					        var m = document.createElement('script'); m.type = 'text/javascript'; m.async = true; m.src = (p == "https:" ? "https://s" : "http://") + "b.monetate.net/js/1/a-d0156d0b/p/marriott.com/" + Math.floor((monetateT + 2665099) / 3600000) + "/g";
+					        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(m, s);
+					    }
+					})();
+				 </script>
+</meta></head>
+<body class="RZ reservations l-responsive resort" data-imgpath="http://cache.marriott.com" data-responsive="true" id="respath">
+<a id="top" name="topOfPage"></a>
+<div class="page-container clearfix" data-imgpath="http://cache.marriott.com" data-responsive="true" id="page-container">
+<script type="text/javascript">
+//<!--
+var imgPath = 'http://cache.marriott.com';
+var webfontloads = true;
+//-->
+</script>
+<!--[if lte IE 9]>
+	
+<![endif]-->
+<div class="mboxDefault"></div>
+<script>
+  						if (typeof mboxCreate !== 'undefined') {
+							mboxCreate('marriott.com_global_controls_header' );
+						} 
+					</script>
+<input type="hidden" value="http://www.marriott.com"/>
+<!-- TIMESTAMP="Mon Aug 29 08:20:18 EDT 2016" JVMID="pEbizMdcom8D169_prd5" -->
+<div class="l-content-wrapper" id="content-wrapper">
+<div class="m-brand-bar m-subheader m-hotel-title is-ritz-brand is-rz-eb-brand clearfix l-em-reset">
+<div class="m-hotel-title-container clearfix">
+<div class="m-hotel-logo"><img alt="The Ritz-Carlton Reynolds, Lake Oconee logo" src="http://cache.marriott.com/propertyimages/brandgeneric/rz/rz_logo_L.png"/></div>
+<div class="l-hotel-information clearfix">
+<h1 class="hotel-name">
+<span class="icon-drawer-open" id="js-collapse-brand-bar">
+<span>The Ritz-Carlton Reynolds, Lake Oconee</span>
+</span><a class="analytics-click is-visible-ml noToggleHotelName" data-analytics="{'location':'auxiliary'}" href="http://www.ritzcarlton.com/?marshaCode=AHNRZ&amp;locale=en_US" itemprop="name" title="The Ritz-Carlton Reynolds, Lake Oconee">The Ritz-Carlton Reynolds, Lake Oconee</a>
+</h1>
+<address class="">
+<a class="analytics-click t-address is-cursor-pointer" data-analytic-custom-data="products=;AHNRZ" data-analytic-uri="HWS Section" data-analytics="{'location':'auxiliary'}" href="http://www.ritzcarlton.com/?marshaCode=AHNRZ&amp;locale=en_US&amp;dest=map" title="MAPS &amp; TRANSPORTATION">
+<span class="icon-view-map t-icon"></span>1 Lake Oconee Trail 
+							
+							
+							
+								<span itemprop="addressLocality">Greensboro</span>,
+							
+							
+								<span itemprop="addressRegion">GA</span>
+<span itemprop="postalCode">30642</span>
+<span itemprop="addressCountry">USA</span>
+</a>
+</address>
+<ul class="m-hotel-links l-horizontal-list" title="Hotel Links">
+<li id="phone-num-container"><span class="icon-phone t-icon"></span><a class="phone-number analytics-click" data-analytic-custom-data="products=;AHNRZ" data-analytic-location="auxiliary" data-analytic-uri="HWS Section" href="#">+1-706-467-0600<span class="t-icon icon-triangle-down"></span></a>
+<ul class="phone-numbers is-hidden">
+<li>
+<span>Phone:</span>
+<span itemprop="telephone">+1-706-467-0600</span>
+</li>
+<li>
+<span>Fax:</span>
+<span itemprop="faxNumber">+1-706-467-0601</span>
+</li>
+<li>
+<span>Sales:</span>
+<span>+1-706-467-7115 ext. 7115</span>
+</li>
+<li>
+<span>Sales fax:</span>
+<span>+1-706-467-0601</span>
+</li>
+<li>
+<span>Toll-Free Reservation Center:</span>
+<span>1-800-241-3333</span>
+</li>
+<li class="toll-free-container"><a class="toll-free" href="/help/global-phone-reservation-numbers.mi" title="Toll-free Reservations Worldwide">Toll-free Reservations Worldwide</a></li>
+</ul>
+<noscript>
+<strong class="phone-number" title="PHONE NUMBERS">PHONE NUMBERS</strong>
+<ul class="phone-numbers">
+<li>
+<span>Phone:</span>
+<span itemprop="telephone">+1-706-467-0600</span>
+</li>
+<li>
+<span>Fax:</span>
+<span itemprop="faxNumber">+1-706-467-0601</span>
+</li>
+<li>
+<span>Sales:</span>
+<span>+1-706-467-7115 ext. 7115</span>
+</li>
+<li>
+<span>Sales fax:</span>
+<span>+1-706-467-0601</span>
+</li>
+<li>
+<span>Toll-Free Reservation Center:</span>
+<span>1-800-241-3333</span>
+</li>
+<li class="toll-free-container"><a class="toll-free" href="/help/global-phone-reservation-numbers.mi" title="Toll-free Reservations Worldwide">Toll-free Reservations Worldwide***</a></li>
+</ul>
+</noscript></li>
+<li class="js-photo-gallery"><a class="hotel-photo-detail" href="/hotels/hotel-photos/ahnrz-the-ritz-carlton-reynolds-lake-oconee/" rel="/hotels/photo-tours.mi?marshaCode=AHNRZ&amp;pageID=HWHOM&amp;imageID=0" title="Photos"><span class="icon-photo-gallery t-icon"></span> Photos</a></li>
+<li class="is-visible-m"><a href="http://www.ritzcarlton.com/?marshaCode=AHNRZ&amp;locale=en_US&amp;dest=details" title="Hotel Details">Hotel Details</a></li>
+<li class="is-visible-l">
+<a class="mi-popover analytics-click" data-analytics='{"sendNow":"true", "description":"Currency-Calculator"}' href="/reservation/displayCalculator.mi" id="currency-calculator" target="new">
+			Currency calculator
+		</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="l-container " id="layout-container">
+<div class="l-edit-dates ">
+<div class="l-mml-col-6 l-mll-col-8 l-clear" id="layout-body-container">
+<div id="layout-body">
+<input id="availabilityURL" name="availabilityURL" type="hidden" value="/reservation/availabilitySearch.mi?isSearch=false&amp;isRateCalendar=false&amp;clusterCode=GOV&amp;corporateCode=GOV
+			&amp;groupCode=&amp;numberOfRooms=1&amp;numberOfGuests=1
+			&amp;incentiveType_Number=&amp;incentiveType=false
+			&amp;useRewardsPoints=false&amp;propertyCode=AHNRZ"/>
+<p class="is-hidden" id="is-unavailible">Not Available <span class="is-visible-mll">for Check-in</span></p>
+<input name="pastKDateMsg" type="hidden" value="Rates not available"/>
+<input name="lowestRateLabel" type="hidden" value="Lowest Price"/>
+<input name="defaultTabTotalCost" type="hidden" value="true"/>
+<input name="currentMonth" type="hidden" value="09/2016"/>
+<input name="rateCurrency" type="hidden" value="USD"/>
+<input name="propertyCode" type="hidden" value="AHNRZ"/>
+<div id="guest-info-error-messages">
+</div>
+<input name="totalNightStayMsg" type="hidden" value="for 1 night"/>
+<h2 class="adf-header">
+			Flexible Dates
+		</h2>
+<h3 class="adf-subheader">
+			
+			
+				
+				
+				
+					
+						Government Rate
+					
+					
+				
+			
+		</h3>
+<div class="" id="availability-calendar-container">
+<div class="t-description-modal is-hidden-ie l-display-block" id="description-modal">
+<p class="description-text clearfloat l-float-left t-font-sm">
+<span id="pointsavers-description">PointSavers offers up to 33% in point savings, depending on the hotel category and number of nights requested.</span>
+<span id="seasonalawards-description">This hotel is offering Seasonal Awards, so you can use fewer points when you book a stay during these dates.</span>
+</p>
+</div>
+<p>Select check-in date by:</p>
+<ul class="availability-rate-type-tabs">
+<li class="is-first-tab"><a class="t-no-decor analytics-click" data-analytics='{"sendNow":"true", "customData":"prop29=Reservations:FlexibleDates:Average Lowest Cost"}' href="#tab0"><span class="t-font-bold">Average Lowest Cost (USD)</span><br/><span>Per night per room</span></a></li>
+<li class="is-last-tab"><a class="t-no-decor analytics-click" data-analytics='{"sendNow":"true", "customData":"prop29=Reservations:FlexibleDates:Total Room Cost"}' href="#tab1"><span class="t-font-bold">Total Room Cost <span>(USD)</span></span><br/><span>Rates vary during stay</span></a></li>
+</ul>
+<div class="availability-rate-type-container l-margin-bottom" id="tab0">
+<div class="tab-panel-heading clearfix">
+<div class="availability-calendar-messaging l-clear">
+<p class="message">Average room cost is the average of the lowest cost per night per room for the number of nights requested; <span>nightly rates may vary during your stay.</span></p>
+<p class="submessage">Other rates may be offered as you proceed with your reservation. <span>Room rates do not include taxes and fees in most markets.</span></p>
+</div>
+</div>
+<noscript>
+</noscript>
+<ul class="t-month-header l-center-align" id="availability-calendar-month-navigation-0">
+<li class="previous-month cal-prev is-visible-sm"><a class="t-no-decor analytics-click" data-analytics='{"sendNow":"true", "customData":"prop29=Reservations:Deals Calendar:Left Arrow"}' href="/reservation/availabilityCalendar.mi?month=08/2016"><i class="icon-arrow-left t-icon-l"></i><span class="is-hidden-text">08/2016</span></a></li>
+<li class="current-month t-font-l t-font-semi-bold l-padding-left-half l-padding-right-half">
+		 			
+			 			
+				 			
+				 			
+				 			September 2016
+				 			
+			 			
+		 			
+		 		</li>
+<li class="next-month cal-next is-visible-sm"><a class=" t-no-decor analytics-click" data-analytics='{"sendNow":"true", "customData":"prop29=Reservations:Deals Calendar:Right Arrow"}' href="/reservation/availabilityCalendar.mi?month=10/2016"><i class="icon-arrow-right t-icon-l"></i><span class="is-hidden-text">10/2016</span></a></li>
+</ul>
+<table class="m-availability-cal" id="isNightlyRateView">
+<thead>
+<tr>
+<th class="t-day-label l-float-left l-left-align" data-dayofweek-label="sun">Sun</th>
+<th class="t-day-label l-float-left l-left-align" data-dayofweek-label="mon">Mon</th>
+<th class="t-day-label l-float-left l-left-align" data-dayofweek-label="tue">Tue</th>
+<th class="t-day-label l-float-left l-left-align" data-dayofweek-label="wed">Wed</th>
+<th class="t-day-label l-float-left l-left-align" data-dayofweek-label="thu">Thu</th>
+<th class="t-day-label l-float-left l-left-align" data-dayofweek-label="fri">Fri</th>
+<th class="t-day-label l-float-left l-left-align" data-dayofweek-label="sat">Sat</th>
+</tr>
+</thead>
+<a class="prevWeek is-hidden-m cal-prev" href="#">Show Previous</a>
+<tbody>
+<tr class="first-row checkin-month">
+<td class="prior-month-cell is-visible-sm unavailable-date-cell past-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sun
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">28</span>
+</p>
+</td>
+<td class="prior-month-cell is-visible-sm available-date-cell l-float-left">
+<a class="t-no-decor" href="/reservation/availabilitySearch.mi?isSearch=false&amp;isRateCalendar=false&amp;clusterCode=GOV&amp;corporateCode=GOV
+			&amp;groupCode=&amp;numberOfRooms=1&amp;numberOfGuests=1
+			&amp;incentiveType_Number=&amp;incentiveType=false
+			&amp;useRewardsPoints=false&amp;propertyCode=AHNRZ&amp;fromDate=08/29/16&amp;toDate=08/30/16&amp;costView=isNightlyRateView&amp;ratePlanCode=GVTR&amp;rate=246.75">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Mon
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">29</span>
+</p>
+<p class="t-rate l-center-align l-clear l-padding-quarter l-margin-bottom-none" id="rate-program-GVTR">
+						      					
+						      						
+						      							246.75
+								      				
+								      					
+								      				
+								      			
+						      				</p>
+<p>
+</p>
+</a>
+</td>
+<td class="prior-month-cell is-visible-sm available-date-cell l-float-left">
+<a class="t-no-decor" href="/reservation/availabilitySearch.mi?isSearch=false&amp;isRateCalendar=false&amp;clusterCode=GOV&amp;corporateCode=GOV
+			&amp;groupCode=&amp;numberOfRooms=1&amp;numberOfGuests=1
+			&amp;incentiveType_Number=&amp;incentiveType=false
+			&amp;useRewardsPoints=false&amp;propertyCode=AHNRZ&amp;fromDate=08/30/16&amp;toDate=08/31/16&amp;costView=isNightlyRateView&amp;ratePlanCode=GVTR&amp;rate=246.75">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Tue
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">30</span>
+</p>
+<p class="t-rate l-center-align l-clear l-padding-quarter l-margin-bottom-none" id="rate-program-GVTR">
+						      					
+						      						
+						      							246.75
+								      				
+								      					
+								      				
+								      			
+						      				</p>
+<p>
+</p>
+</a>
+</td>
+<td class="prior-month-cell is-visible-sm unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Wed
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">31</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="available-date-cell l-float-left">
+<a class="t-no-decor" href="/reservation/availabilitySearch.mi?isSearch=false&amp;isRateCalendar=false&amp;clusterCode=GOV&amp;corporateCode=GOV
+			&amp;groupCode=&amp;numberOfRooms=1&amp;numberOfGuests=1
+			&amp;incentiveType_Number=&amp;incentiveType=false
+			&amp;useRewardsPoints=false&amp;propertyCode=AHNRZ&amp;fromDate=09/01/16&amp;toDate=09/02/16&amp;costView=isNightlyRateView&amp;ratePlanCode=GVTR&amp;rate=246.75">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Thu
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">1</span>
+</p>
+<p class="t-rate l-center-align l-clear l-padding-quarter l-margin-bottom-none" id="rate-program-GVTR">
+						      					
+						      						
+						      							246.75
+								      				
+								      					
+								      				
+								      			
+						      				</p>
+<p>
+</p>
+</a>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Fri
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">2</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sat
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">3</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+</tr>
+<tr class="checkin-month">
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sun
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">4</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="available-date-cell lowest-rate-cell l-float-left">
+<a class="t-no-decor" href="/reservation/availabilitySearch.mi?isSearch=false&amp;isRateCalendar=false&amp;clusterCode=GOV&amp;corporateCode=GOV
+			&amp;groupCode=&amp;numberOfRooms=1&amp;numberOfGuests=1
+			&amp;incentiveType_Number=&amp;incentiveType=false
+			&amp;useRewardsPoints=false&amp;propertyCode=AHNRZ&amp;fromDate=09/05/16&amp;toDate=09/06/16&amp;costView=isNightlyRateView&amp;ratePlanCode=GVTR&amp;rate=224.25">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Mon
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">5</span>
+</p>
+<p class="t-rate l-center-align l-clear l-padding-quarter l-margin-bottom-none" id="rate-program-GVTR">
+						      					
+						      						
+						      							224.25
+								      				
+								      					
+								      				
+								      			
+						      				</p>
+<p class="t-added-descript l-float-right l-clear l-margin-none t-font-s is-hidden-sm">Lowest Price</p>
+<p>
+</p>
+</a>
+</td>
+<td class="available-date-cell lowest-rate-cell l-float-left">
+<a class="t-no-decor" href="/reservation/availabilitySearch.mi?isSearch=false&amp;isRateCalendar=false&amp;clusterCode=GOV&amp;corporateCode=GOV
+			&amp;groupCode=&amp;numberOfRooms=1&amp;numberOfGuests=1
+			&amp;incentiveType_Number=&amp;incentiveType=false
+			&amp;useRewardsPoints=false&amp;propertyCode=AHNRZ&amp;fromDate=09/06/16&amp;toDate=09/07/16&amp;costView=isNightlyRateView&amp;ratePlanCode=GVTR&amp;rate=224.25">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Tue
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">6</span>
+</p>
+<p class="t-rate l-center-align l-clear l-padding-quarter l-margin-bottom-none" id="rate-program-GVTR">
+						      					
+						      						
+						      							224.25
+								      				
+								      					
+								      				
+								      			
+						      				</p>
+<p class="t-added-descript l-float-right l-clear l-margin-none t-font-s is-hidden-sm">Lowest Price</p>
+<p>
+</p>
+</a>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Wed
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">7</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Thu
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">8</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Fri
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">9</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sat
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">10</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+</tr>
+<tr class="checkin-month">
+<td class="available-date-cell l-float-left">
+<a class="t-no-decor" href="/reservation/availabilitySearch.mi?isSearch=false&amp;isRateCalendar=false&amp;clusterCode=GOV&amp;corporateCode=GOV
+			&amp;groupCode=&amp;numberOfRooms=1&amp;numberOfGuests=1
+			&amp;incentiveType_Number=&amp;incentiveType=false
+			&amp;useRewardsPoints=false&amp;propertyCode=AHNRZ&amp;fromDate=09/11/16&amp;toDate=09/12/16&amp;costView=isNightlyRateView&amp;ratePlanCode=GVTR&amp;rate=246.75">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sun
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">11</span>
+</p>
+<p class="t-rate l-center-align l-clear l-padding-quarter l-margin-bottom-none" id="rate-program-GVTR">
+						      					
+						      						
+						      							246.75
+								      				
+								      					
+								      				
+								      			
+						      				</p>
+<p>
+</p>
+</a>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Mon
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">12</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="available-date-cell l-float-left">
+<a class="t-no-decor" href="/reservation/availabilitySearch.mi?isSearch=false&amp;isRateCalendar=false&amp;clusterCode=GOV&amp;corporateCode=GOV
+			&amp;groupCode=&amp;numberOfRooms=1&amp;numberOfGuests=1
+			&amp;incentiveType_Number=&amp;incentiveType=false
+			&amp;useRewardsPoints=false&amp;propertyCode=AHNRZ&amp;fromDate=09/13/16&amp;toDate=09/14/16&amp;costView=isNightlyRateView&amp;ratePlanCode=GVTR&amp;rate=246.75">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Tue
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">13</span>
+</p>
+<p class="t-rate l-center-align l-clear l-padding-quarter l-margin-bottom-none" id="rate-program-GVTR">
+						      					
+						      						
+						      							246.75
+								      				
+								      					
+								      				
+								      			
+						      				</p>
+<p>
+</p>
+</a>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Wed
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">14</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Thu
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">15</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Fri
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">16</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sat
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">17</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+</tr>
+<tr class="checkin-month">
+<td class="available-date-cell lowest-rate-cell l-float-left">
+<a class="t-no-decor" href="/reservation/availabilitySearch.mi?isSearch=false&amp;isRateCalendar=false&amp;clusterCode=GOV&amp;corporateCode=GOV
+			&amp;groupCode=&amp;numberOfRooms=1&amp;numberOfGuests=1
+			&amp;incentiveType_Number=&amp;incentiveType=false
+			&amp;useRewardsPoints=false&amp;propertyCode=AHNRZ&amp;fromDate=09/18/16&amp;toDate=09/19/16&amp;costView=isNightlyRateView&amp;ratePlanCode=GVTR&amp;rate=224.25">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sun
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">18</span>
+</p>
+<p class="t-rate l-center-align l-clear l-padding-quarter l-margin-bottom-none" id="rate-program-GVTR">
+						      					
+						      						
+						      							224.25
+								      				
+								      					
+								      				
+								      			
+						      				</p>
+<p class="t-added-descript l-float-right l-clear l-margin-none t-font-s is-hidden-sm">Lowest Price</p>
+<p>
+</p>
+</a>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Mon
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">19</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Tue
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">20</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Wed
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">21</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Thu
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">22</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Fri
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">23</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sat
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">24</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+</tr>
+<tr class="checkin-month">
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sun
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">25</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Mon
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">26</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Tue
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">27</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell checkin-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Wed
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">28</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Thu
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">29</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Fri
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">30</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="next-month-cell is-visible-sm unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sat
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">1</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<a class="nextWeek is-hidden-m l-margin-top cal-next" href="#">Show Next</a>
+</div>
+<div class="availability-rate-type-container l-margin-bottom" id="tab1">
+<div class="tab-panel-heading clearfix">
+<div class="availability-calendar-messaging l-clear">
+<p class="message">Total room cost is the sum of the lowest nightly costs per room for the number of nights requested.</p>
+<p class="submessage">Other rates may be offered as you proceed with your reservation. <span>Room rates do not include taxes and fees in most markets.</span></p>
+</div>
+</div>
+<noscript>
+</noscript>
+<ul class="t-month-header l-center-align" id="availability-calendar-month-navigation-1">
+<li class="previous-month cal-prev is-visible-sm"><a class="t-no-decor analytics-click" data-analytics='{"sendNow":"true", "customData":"prop29=Reservations:Deals Calendar:Left Arrow"}' href="/reservation/availabilityCalendar.mi?month=08/2016"><i class="icon-arrow-left t-icon-l"></i><span class="is-hidden-text">08/2016</span></a></li>
+<li class="current-month t-font-l t-font-semi-bold l-padding-left-half l-padding-right-half">
+		 			
+			 			
+				 			
+				 			
+				 			September 2016
+				 			
+			 			
+		 			
+		 		</li>
+<li class="next-month cal-next is-visible-sm"><a class=" t-no-decor analytics-click" data-analytics='{"sendNow":"true", "customData":"prop29=Reservations:Deals Calendar:Right Arrow"}' href="/reservation/availabilityCalendar.mi?month=10/2016"><i class="icon-arrow-right t-icon-l"></i><span class="is-hidden-text">10/2016</span></a></li>
+</ul>
+<table class="m-availability-cal" id="isSubtotalView">
+<thead>
+<tr>
+<th class="t-day-label l-float-left l-left-align" data-dayofweek-label="sun">Sun</th>
+<th class="t-day-label l-float-left l-left-align" data-dayofweek-label="mon">Mon</th>
+<th class="t-day-label l-float-left l-left-align" data-dayofweek-label="tue">Tue</th>
+<th class="t-day-label l-float-left l-left-align" data-dayofweek-label="wed">Wed</th>
+<th class="t-day-label l-float-left l-left-align" data-dayofweek-label="thu">Thu</th>
+<th class="t-day-label l-float-left l-left-align" data-dayofweek-label="fri">Fri</th>
+<th class="t-day-label l-float-left l-left-align" data-dayofweek-label="sat">Sat</th>
+</tr>
+</thead>
+<a class="prevWeek is-hidden-m cal-prev" href="#">Show Previous</a>
+<tbody>
+<tr class="first-row checkin-month">
+<td class="prior-month-cell is-visible-sm unavailable-date-cell past-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sun
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">28</span>
+</p>
+</td>
+<td class="prior-month-cell is-visible-sm available-date-cell l-float-left">
+<a class="t-no-decor" href="/reservation/availabilitySearch.mi?isSearch=false&amp;isRateCalendar=false&amp;clusterCode=GOV&amp;corporateCode=GOV
+			&amp;groupCode=&amp;numberOfRooms=1&amp;numberOfGuests=1
+			&amp;incentiveType_Number=&amp;incentiveType=false
+			&amp;useRewardsPoints=false&amp;propertyCode=AHNRZ&amp;fromDate=08/29/16&amp;toDate=08/30/16&amp;costView=isSubtotalView&amp;ratePlanCode=GVTR&amp;rate=246.75">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Mon
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">29</span>
+</p>
+<p class="t-rate l-center-align l-clear l-padding-quarter l-margin-bottom-none" id="rate-program-GVTR">
+						      					
+						      						
+								      				
+								      					246.75
+								      					
+									      					<span>for 1 night</span>
+</p>
+<p>
+</p>
+</a>
+</td>
+<td class="prior-month-cell is-visible-sm available-date-cell l-float-left">
+<a class="t-no-decor" href="/reservation/availabilitySearch.mi?isSearch=false&amp;isRateCalendar=false&amp;clusterCode=GOV&amp;corporateCode=GOV
+			&amp;groupCode=&amp;numberOfRooms=1&amp;numberOfGuests=1
+			&amp;incentiveType_Number=&amp;incentiveType=false
+			&amp;useRewardsPoints=false&amp;propertyCode=AHNRZ&amp;fromDate=08/30/16&amp;toDate=08/31/16&amp;costView=isSubtotalView&amp;ratePlanCode=GVTR&amp;rate=246.75">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Tue
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">30</span>
+</p>
+<p class="t-rate l-center-align l-clear l-padding-quarter l-margin-bottom-none" id="rate-program-GVTR">
+						      					
+						      						
+								      				
+								      					246.75
+								      					
+									      					<span>for 1 night</span>
+</p>
+<p>
+</p>
+</a>
+</td>
+<td class="prior-month-cell is-visible-sm unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Wed
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">31</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="available-date-cell l-float-left">
+<a class="t-no-decor" href="/reservation/availabilitySearch.mi?isSearch=false&amp;isRateCalendar=false&amp;clusterCode=GOV&amp;corporateCode=GOV
+			&amp;groupCode=&amp;numberOfRooms=1&amp;numberOfGuests=1
+			&amp;incentiveType_Number=&amp;incentiveType=false
+			&amp;useRewardsPoints=false&amp;propertyCode=AHNRZ&amp;fromDate=09/01/16&amp;toDate=09/02/16&amp;costView=isSubtotalView&amp;ratePlanCode=GVTR&amp;rate=246.75">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Thu
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">1</span>
+</p>
+<p class="t-rate l-center-align l-clear l-padding-quarter l-margin-bottom-none" id="rate-program-GVTR">
+						      					
+						      						
+								      				
+								      					246.75
+								      					
+									      					<span>for 1 night</span>
+</p>
+<p>
+</p>
+</a>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Fri
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">2</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sat
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">3</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+</tr>
+<tr class="checkin-month">
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sun
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">4</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="available-date-cell lowest-rate-cell l-float-left">
+<a class="t-no-decor" href="/reservation/availabilitySearch.mi?isSearch=false&amp;isRateCalendar=false&amp;clusterCode=GOV&amp;corporateCode=GOV
+			&amp;groupCode=&amp;numberOfRooms=1&amp;numberOfGuests=1
+			&amp;incentiveType_Number=&amp;incentiveType=false
+			&amp;useRewardsPoints=false&amp;propertyCode=AHNRZ&amp;fromDate=09/05/16&amp;toDate=09/06/16&amp;costView=isSubtotalView&amp;ratePlanCode=GVTR&amp;rate=224.25">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Mon
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">5</span>
+</p>
+<p class="t-rate l-center-align l-clear l-padding-quarter l-margin-bottom-none" id="rate-program-GVTR">
+						      					
+						      						
+								      				
+								      					224.25
+								      					
+									      					<span>for 1 night</span>
+</p>
+<p class="t-added-descript l-float-right l-clear l-margin-none t-font-s is-hidden-sm">Lowest Price</p>
+<p>
+</p>
+</a>
+</td>
+<td class="available-date-cell lowest-rate-cell l-float-left">
+<a class="t-no-decor" href="/reservation/availabilitySearch.mi?isSearch=false&amp;isRateCalendar=false&amp;clusterCode=GOV&amp;corporateCode=GOV
+			&amp;groupCode=&amp;numberOfRooms=1&amp;numberOfGuests=1
+			&amp;incentiveType_Number=&amp;incentiveType=false
+			&amp;useRewardsPoints=false&amp;propertyCode=AHNRZ&amp;fromDate=09/06/16&amp;toDate=09/07/16&amp;costView=isSubtotalView&amp;ratePlanCode=GVTR&amp;rate=224.25">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Tue
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">6</span>
+</p>
+<p class="t-rate l-center-align l-clear l-padding-quarter l-margin-bottom-none" id="rate-program-GVTR">
+						      					
+						      						
+								      				
+								      					224.25
+								      					
+									      					<span>for 1 night</span>
+</p>
+<p class="t-added-descript l-float-right l-clear l-margin-none t-font-s is-hidden-sm">Lowest Price</p>
+<p>
+</p>
+</a>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Wed
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">7</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Thu
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">8</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Fri
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">9</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sat
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">10</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+</tr>
+<tr class="checkin-month">
+<td class="available-date-cell l-float-left">
+<a class="t-no-decor" href="/reservation/availabilitySearch.mi?isSearch=false&amp;isRateCalendar=false&amp;clusterCode=GOV&amp;corporateCode=GOV
+			&amp;groupCode=&amp;numberOfRooms=1&amp;numberOfGuests=1
+			&amp;incentiveType_Number=&amp;incentiveType=false
+			&amp;useRewardsPoints=false&amp;propertyCode=AHNRZ&amp;fromDate=09/11/16&amp;toDate=09/12/16&amp;costView=isSubtotalView&amp;ratePlanCode=GVTR&amp;rate=246.75">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sun
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">11</span>
+</p>
+<p class="t-rate l-center-align l-clear l-padding-quarter l-margin-bottom-none" id="rate-program-GVTR">
+						      					
+						      						
+								      				
+								      					246.75
+								      					
+									      					<span>for 1 night</span>
+</p>
+<p>
+</p>
+</a>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Mon
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">12</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="available-date-cell l-float-left">
+<a class="t-no-decor" href="/reservation/availabilitySearch.mi?isSearch=false&amp;isRateCalendar=false&amp;clusterCode=GOV&amp;corporateCode=GOV
+			&amp;groupCode=&amp;numberOfRooms=1&amp;numberOfGuests=1
+			&amp;incentiveType_Number=&amp;incentiveType=false
+			&amp;useRewardsPoints=false&amp;propertyCode=AHNRZ&amp;fromDate=09/13/16&amp;toDate=09/14/16&amp;costView=isSubtotalView&amp;ratePlanCode=GVTR&amp;rate=246.75">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Tue
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">13</span>
+</p>
+<p class="t-rate l-center-align l-clear l-padding-quarter l-margin-bottom-none" id="rate-program-GVTR">
+						      					
+						      						
+								      				
+								      					246.75
+								      					
+									      					<span>for 1 night</span>
+</p>
+<p>
+</p>
+</a>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Wed
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">14</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Thu
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">15</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Fri
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">16</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sat
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">17</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+</tr>
+<tr class="checkin-month">
+<td class="available-date-cell lowest-rate-cell l-float-left">
+<a class="t-no-decor" href="/reservation/availabilitySearch.mi?isSearch=false&amp;isRateCalendar=false&amp;clusterCode=GOV&amp;corporateCode=GOV
+			&amp;groupCode=&amp;numberOfRooms=1&amp;numberOfGuests=1
+			&amp;incentiveType_Number=&amp;incentiveType=false
+			&amp;useRewardsPoints=false&amp;propertyCode=AHNRZ&amp;fromDate=09/18/16&amp;toDate=09/19/16&amp;costView=isSubtotalView&amp;ratePlanCode=GVTR&amp;rate=224.25">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sun
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">18</span>
+</p>
+<p class="t-rate l-center-align l-clear l-padding-quarter l-margin-bottom-none" id="rate-program-GVTR">
+						      					
+						      						
+								      				
+								      					224.25
+								      					
+									      					<span>for 1 night</span>
+</p>
+<p class="t-added-descript l-float-right l-clear l-margin-none t-font-s is-hidden-sm">Lowest Price</p>
+<p>
+</p>
+</a>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Mon
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">19</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Tue
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">20</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Wed
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">21</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Thu
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">22</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Fri
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">23</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sat
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">24</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+</tr>
+<tr class="checkin-month">
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sun
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">25</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Mon
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">26</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Tue
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">27</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell checkin-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Wed
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">28</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Thu
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">29</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Fri
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">30</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+<td class="next-month-cell is-visible-sm unavailable-date-cell l-float-left">
+<p class="t-date l-right-align l-padding-quarter l-margin-bottom-none l-em-reset">
+<span class="is-hidden-sm t-font-bold">
+					      				
+	 											Sat
+	 										
+				      				</span>
+<span class="is-hidden-sm t-num-month">9/</span><span class="t-num-day">1</span>
+</p>
+<p class="unavailable-rate l-margin-bottom-none t-font-s t-darkMedGray">Not Available <span class="is-visible-mll">for Check-in</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<a class="nextWeek is-hidden-m l-margin-top cal-next" href="#">Show Next</a>
+</div>
+<a class="l-pos-rel l-visibility-hidden l-button-goto-deals-link" name="gotoDealsDetail">*</a>
+<ul class="availability-calendar-legend">
+<li class="check-in">Check-in Date</li>
+<li class="lowest">Lowest Price</li>
+<li class="not-available is-visible-sm">Rates not available</li>
+</ul>
+</div>
+</div>
+</div>
+<aside class="l-mml-col-3 l-mll-col-4 l-mml-last-col l-mll-last-col l-layout-nav" id="layout-nav">
+<html:xhtml></html:xhtml>
+<div class="message-display alt-future-container clearfix">
+<div class="floatLeft">
+<h2>
+					Other Options
+				</h2>
+<ul class="cross-sell-links">
+<p><a href="/reservation/availabilityCalendar.mi?specialRate=false">View Standard Rates</a></p>
+</ul>
+</div>
+</div>
+<div class="my-stay-container l-availability-search m-search-form non-partner clearfix" id="availability-search">
+<input id="missingcheckInDateMsg" name="missingcheckInDateMsg" type="hidden" value="Please enter a check-in date."/>
+<input id="missingcheckOutDateMsg" name="missingcheckOutDateMsg" type="hidden" value="Please enter a check-out date."/>
+<input id="groupMessage" name="groupMessage" type="hidden" value='The special rate you requested is not applicable when requesting more than 3 rooms. Click "OK" to request a group room rate. Click "Cancel" to revise your search.'/>
+<input id="useRewardsPtsMessage" name="useRewardsPtsMessage" type="hidden" value='Marriott Rewards points are not available for use when requesting more than 3 rooms.  Click "OK" to request a special group room rate. Click "Cancel" to revise your search.'/>
+<input id="groupCodeMsg" name="groupCodeMsg" type="hidden" value="The group code you entered has fewer than seven characters. Please verify the code."/>
+<input id="corpCodeMsg" name="corpCodeMsg" type="hidden" value="The corporate/promotional code you entered has fewer than three characters. Please verify the code."/>
+<input id="flexibleDatesMoreRoomMsg" name="flexibleDatesMoreRoomMsg" type="hidden" value="Flexible date searches cannot be completed requesting more than 3 rooms. Please revise your search."/>
+<input id="awardTypeMsg" name="awardTypeMsg" type="hidden" value="You have requested a special rate without specifying an award type or number. We cannot check rates and availability unless the award type or number is specified.
+			Click 'OK' to continue without the award type or number, or 'Cancel' to go back and change your search options"/>
+<input id="redeemAwardMoreRoomsMsg" name="redeemAwardMoreRoomsMsg" type="hidden" value="The additional information is not applicable when requesting more than 3 rooms. Click 'OK' to request a group room rate. Click 'Cancel' to revise your search."/>
+<input id="redeemAwardOneRoomMsg" name="redeemAwardOneRoomMsg" type="hidden" value="You may only reserve one room at a time when redeeming an award.  To book more than one room, please call Marriott Individual Incentives Reservations at 1-800-899-7235."/>
+<h2>Edit Your Search</h2>
+<form action="/reservation/availabilitySearch.mi?isSearch=false" class="reservation-modify-search-form" id="my-stay-search-form" method="post">
+<input name="accountId" type="hidden" value=""/>
+<div class="clearfix m-edit-fields">
+<p class="flexible-date-searchP is-inline-labels t-flexible-date-search">
+<input checked="checked" class="search-flexible-date-search flexible-date-search" id="flexible-date-search" name="flexibleDateSearch" type="checkbox" value="true"/>
+<input name="flexibleDateSearch" type="hidden" value="false"/>
+<label for="flexible-date-search">
+				My dates are flexible
+			</label>
+<input name="flexibleDates" type="hidden" value="true"/>
+</p>
+<div class=" l-edit-search clearfix">
+<p class="is-date-field l-s-col-2">
+<label for="fromDate">
+<span class="icon icon-asterisk t-form-asterisk"></span>
+				Check in 
+			</label>
+<input class="calendar-module-fromdate search-fromDate js-moreoptions-expander" id="fromDate" maxlength="10" name="fromDate" type="text" value="09/28/16"/><input name="minDate" type="hidden" value="08/29/2016"/><input name="maxDate" type="hidden" value="08/20/2017"/><input name="monthNames" type="hidden" value="January,February,March,April,May,June,July,August,September,October,November,December"/><input name="weekDays" type="hidden" value="S,M,T,W,T,F,S"/><input name="dateFormatPattern" type="hidden" value="MM/dd/yy"/>
+</p>
+<p class="is-date-field l-s-col-2 l-s-last-col target">
+<label for="toDate">
+<span class="icon icon-asterisk t-form-asterisk"></span>
+				Check out 
+			</label>
+<input class="calendar-module-todate search-toDate js-moreoptions-expander" id="toDate" maxlength="10" name="toDate" type="text" value="09/29/16"/><input name="populateTodateFromFromDate" type="hidden" value="true"/><input name="defaultToDateDays" type="hidden" value="1"/>
+</p>
+<p class="l-s-col-2 l-s-last-col length-of-stay hidden target">
+<label for="length-of-stay"> 
+					Nights
+				</label>
+<select class="search-length-of-stay" id="length-of-stay" name="lengthOfStay"><option selected="selected" value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option></select>
+</p>
+</div>
+<div class=" l-edit-search clearfix ">
+<p class="l-s-col-2">
+<input name="numberOfNights" type="hidden" value="1"/>
+<label for="room-num">
+	           	Rooms
+	   		</label>
+<select id="room-num" name="numberOfRooms"><option selected="selected" value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option></select>
+</p>
+<p class="l-s-col-2 l-s-last-col">
+<label for="guest-num">
+	           	Guests/room 
+	        </label>
+<select id="guest-num" name="numberOfGuests"><option selected="selected" value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option></select>
+</p>
+</div>
+<div class="l-edit-search clearfix ">
+<div class=" l-sm-col-3">
+<h3 id="hidden-rewards-trigger">
+<a aria-controlled="hidden-rewards-container" class="open" href="#hidden-rewards-container">
+<span class="icon-drawer-close is-hidden"></span>
+							Rewards
+						</a>
+</h3>
+<div aria-expanded="true" id="hidden-rewards-container">
+<p class="usePoints is-inline-labels">
+<input class="search-useRewardsPoint checkbox" id="use-rewards-points" name="useRewardsPoints" type="checkbox" value="true"/>
+<input name="useRewardsPoints" type="hidden" value="false"/>
+<label for="use-rewards-points">
+									Use Rewards points
+								</label>
+<a class="mi-popover t-no-decor l-padding-left-half " href="/hotel-prices/use-points.mi" target="new">
+<span class="t-link t-font-s">What's this?</span>
+</a>
+</p>
+<p class="l-usepoints">
+<label for="res-mr-number"> 
+			  			Rewards number
+		        	</label>
+<input class="mr-number search-rewardNumber formContent short" id="res-mr-number" maxlength="9" name="marriottRewardsNumber" size="22" tabindex="" type="text" value="">
+<script language="javascript">
+	/*
+	This script is to prevent the autocomplete feature on the credit card fields.
+	It cannot be put in a javascript function because invoking the function with any events(onfocus/onchage) on 
+	the text field, doesn't seem to work. Looks like the autocomplete attribute needs to be set when the page loads.
+	Note: There is an option to set autocomplete="true" on 'input type="text"'. But struts 'html:text'
+	doesn't support the attribute since it is not a standard one.
+	*/
+	document.getElementById("res-mr-number").setAttribute("autocomplete", "off");		
+</script>
+</input></p>
+</div>
+</div>
+<div class="l-special-rates-awards is-inline-labels l-s-col-4 l-sm-col-3 l-sm-last-col">
+<h3 id="hidden-special-rates-trigger">
+<a aria-controlled="hidden-special-rates-container" href="#hidden-special-rates-container">
+<span class="icon-drawer-open is-hidden"></span>
+					Special Rates
+				</a>
+</h3>
+<div aria-expanded="false" id="hidden-special-rates-container">
+<input name="rateType" type="hidden" value=""/>
+<p class="t-font-s">(proof of eligibility required at check-in)</p>
+<fieldset>
+<legend><span class="is-hidden-text">Special Rates</span></legend>
+<ul>
+<li>
+<input class="search-clusterCode-none radio" id="none" name="clusterCode" type="radio" value="none"/>
+<label for="none">
+							None
+						</label>
+</li>
+<li>
+<input class="search-clusterCode-AAA radio" id="rateAAA" name="clusterCode" type="radio" value="AAA"/>
+<label for="rateAAA">
+											
+												
+												
+											
+
+
+
+ 
+	
+		AAA/CAA
+	
+	
+	
+	
+
+										</label>
+</li>
+<li>
+<input class="search-clusterCode-S9R radio" id="rateS9R" name="clusterCode" type="radio" value="S9R"/>
+<label for="rateS9R">
+											
+												
+												
+											
+
+
+
+ 
+	
+	
+		Senior Discount
+		
+	
+	
+	
+
+										</label>
+</li>
+<li>
+<input checked="checked" class="search-clusterCode-GOV radio" id="rateGOV" name="clusterCode" type="radio" value="GOV"/>
+<label for="rateGOV">
+										
+											
+												
+													
+													
+												
+
+
+
+ 
+	
+	
+	
+		Government &amp; Military
+	
+	
+
+											
+											
+										
+									</label>
+</li>
+<li class="js-search-toggleinput">
+<input class="search-clusterCode-other radio" id="rate-corp" name="clusterCode" type="radio" value="corp"/>
+<label for="rate-corp">
+							Corporate/promotional code
+						</label>
+<input class="search-corp short radio-secondary-input l-display-block" id="corp-code" maxlength="3" name="corporateCode" type="text" value="">
+</input></li>
+<li class="js-search-toggleinput">
+<input class="search-clusterCode-group radio" id="rate-group" name="clusterCode" type="radio" value="group"/>
+<label for="rate-group">
+								Group code
+							</label>
+<label class="hidden-label" for="group-code">
+								Group code
+							</label>
+<input class="search-group l-display-block " id="group-code" maxlength="7" name="groupCode" type="text" value=""/>
+</li>
+</ul>
+</fieldset>
+</div>
+<p class="m-special-rates">
+<a class="mi-popover t-blue" href="/hotel-prices/special-rates.mi" target="new">
+								About special rates
+							</a>
+</p>
+</div>
+</div>
+<p class="l-margin-bottom clearfix">
+<button class="l-float-right m-button-darkGray" name="btn-submit" type="submit">
+<em>
+					Find
+					</em>
+</button>
+<input name="sSubmit" type="hidden" value="Search"/>
+</p>
+<input name="miniStoreAvailabilitySearch" type="hidden" value="false"/>
+<ul class="m-more-links clearfix">
+<li>
+<a href="/search/default.mi">Advanced search options</a>
+</li>
+</ul>
+<input id="section" name="section" type="hidden" value="availability"/>
+</div>
+<input name="sSubmit" type="hidden" value="Search"/>
+<input id="isFromHws" name="isFromHws" type="hidden" value=""/>
+</form>
+<a class="m-close-button js-close" href="#">
+<span class="icon icon-close"></span>
+<span class="is-hidden-text">Close</span>
+</a>
+</div>
+<div class="msg-layout-6 msgWhiteGrayBrdr">
+<h2>Phone reservations</h2>
+<p>Marriott reservations in the US and Canada: 1-888-236-2427  <br/>
+The Ritz-Carlton reservations in the US and Canada: 800-542-8680<br/>
+Worldwide: Call your <a href="/reservation/worldnum.mi" title="worldwide reservation numbers">local reservations center</a></p>
+<div id="reactive-chat"></div>
+</div>
+</aside>
+</div>
+</div>
+<div class="clear" data-options='{"print":"Print","close":"Close","alertimage":"http://cache.marriott.com/Images/Icons/icon_clock_25x25.gif","alertimagealt":"","alerttitle":""}' id="res-modal-box">
+</div>
+<div class="l-content-container">
+</div>
+<footer class="l-clear">
+<div class="l-em-reset clearfix" id="footer">
+<div class="ie-footer-fix">
+<div class="t-footer-section-spacing clearfix" id="t-legal-footer">
+<section class="t-legal-utility-links l-float-left t-uppercase-small">
+<ul id="utilities-legal">
+<li>
+<a class="analytics-click" href="http://www.marriott.com/marriott/aboutmarriott.mi" title="">
+								About Marriott
+							</a>
+</li>
+<li>
+<a class="analytics-click" href="http://www.marriott.com/help/default.mi" title="">
+								Help
+							</a>
+</li>
+<li>
+<a class="analytics-click" href="http://www.roomkey.com/" rel="external" title="">
+								RoomKey
+							</a>
+</li>
+<li>
+<a class="analytics-click" href="http://www.marriottvacationclub.com?loc=DB59*1-43X1H6&amp;cid=corp-mvc-mi-global-footer" title="">
+								Marriott Timeshare
+							</a>
+</li>
+<li>
+<a class="analytics-click" href="http://www.marriott.com/about/terms-of-use.mi" title="">
+								Terms of Use
+							</a>
+</li>
+<li>
+<a class="analytics-click" href="http://www.marriott.com/about/privacy.mi" title="">
+								Privacy &amp; Cookie Statement
+							</a>
+</li>
+<li id="marriottConsent">
+<script async="async" src="//consent.truste.com/notice?domain=marriott.com&amp;c=marriottConsent&amp;text=true&amp;js=0_v3" type="text/javascript"></script>
+</li>
+</ul>
+</section>
+<section class="t-book-direct l-clear">
+<p>Best Available Rate Guarantee assures you receive the best rates when you book directly with us. If you find a lower publicly available rate within 24 hours of booking, we will match that rate plus give you 25% off the lower rate, subject to guarantee terms and exclusions. Guarantee does not apply to Delta Hotels, Protea Hotels®, Ritz-Carlton Montreal, The Ritz London, and Ritz-Carlton Residences®. Marriott Rewards® and The Ritz-Carlton Rewards® members (“Rewards Members”) who book rooms through a Marriott® Direct Booking Channel, authorized travel agents or select corporate travel partners ("Eligible Channels") at hotels that participate in Marriott Rewards® and The Ritz-Carlton Rewards loyalty programs will receive an exclusive, preferred rate (“Marriott Rewards Member Rate”). Member Rates are available globally at all hotels that participate in Marriott Rewards, excluding hotels in Mainland China, Macau, Hong Kong and Taiwan. Exclusions apply. See our <a href="/online-hotel-booking.mi" title="">Terms &amp; Conditions</a> for additional details related to our Best Available Rate Guarantee and Marriott Rewards Member Rate. Hotels shown on <a href="/default.mi">Marriott.com</a> may be operated under a license from Marriott International, Inc. or one of its affiliates</p>
+</section>
+<section class="t-copyright l-clear" itemscope="" itemtype="http://schema.org/Hotel">
+<p class="t-uppercase-small " id="copyright">© 1996 - 2016 <span itemprop="branchOf" itemscope="" itemtype="http://schema.org/Corporation"><span itemprop="name">Marriott International, Inc.</span></span> All rights reserved. Marriott proprietary information</p>
+</section>
+</div>
+</div>
+</div>
+</footer>
+<script type="text/javascript">
+var hdVars = {
+				HDEnabled : "true",
+				hd_isProfileAuthenticated : "false",
+				hd_isAssociate : "",
+				hd_isAffiliateOfConcur : "",
+				hd_rewardLevel : "",
+				hd_rewardsRedemption : "false",
+				hd_marshaCode : "ahnrz",
+				hd_brand_Codes : "all",
+				hd_errorMessage : 'id="error-messages"',
+				hd_domain : "US",
+				hd_numGuestsPerRoom : "1",
+				hd_numRooms : "1",
+				hd_roomKeyBaseURL :"//www.roomkey.com/referrals",
+				hd_roomKeyAPIKey : "a9bc92520c8acea6eadbc930b2ce2874",
+				hd_city : "Greensboro",
+				hd_stateProvince : "GA",
+				hd_country : "US",
+				hd_sgoSearch : "false",
+				hd_vsDimGrp : "",
+				hd_brandCodes : "",
+				hd_indate : "1475035200000",
+                hd_outdate : "1475121600000",
+				hd_clusterCode :"GOV",
+				hd_incentivesType_Number : "",
+				hd_corporateCode :"",
+				hd_currency : {'AR': 'ARS','AM': 'AMD','AW': 'AWG','AU': 'AUD','AT': 'EUR','BE': 'EUR','BR': 'BRL','CA': 'CAD','KY': 'KYD','CL': 'CLP','CN': 'CNY','CR': 'CRC','CZ': 'CZK','DK': 'DKK','DO': 'DOP','EC': '','EG': 'EGP','SV': 'SVC','FR': 'EUR','GE': 'GEL','DE': 'EUR','GR': 'EUR','GU': '','HU': 'HUF','IN': 'INR','ID': 'IDR','IE': 'EUR','IL': 'ILS','IT': 'EUR','JP': 'JPY','JO': 'JOD','KW': 'KWD','MY': 'MYR','MX': 'MXN','NL': 'EUR','PK': 'PKR','PA': 'PAB','PH': 'PHP','PT': 'EUR','PE': 'PEN','PL': 'PLN','PR': '','QA': 'QAR','RO': 'RON','RU': 'RUB','KN': '','SA': 'SAR','SG': 'SGD','KR': 'KRW','ES': 'EUR','CH': 'CHF','TH': 'THB','TT': 'TTD','TR': 'TRY','US': 'USD','AE': 'AED','GB': 'GBP','VE': '','VN': 'VND','VI': '','CW': '','HN': 'HNL','BH': 'BHD','KZ': 'KZT','SE': 'SEK','SR': 'SRD','CO': 'COP','OM': 'OMR','JM': 'JMD','BS': 'BSD','DZ': 'DZD','LY': 'LYD','BB': 'BBD','AZ': 'AZN','VG': ''},
+                cList : {'enable.rewards.members' : 'false','enable.successfully.booked' : 'false','enable.redemption.points' : 'false','enable.remember.me' : 'true','enable.mobile' : 'false','enable.session.timeout' : 'false','enable.special.rates.aaa' : 'true','enable.special.rates.senior' : 'true','enable.special.rates.gov' : 'false','enable.users.sgo' : 'false','number.of.pages' : '-1','enable.presented.hd.solution' : 'true','enable.to.industry_solutions.users' : 'false','enable.to.brand' : 'true','percentage.users.to.show' : '100','percentage.users.to.show.incremental' : '1','enable.associate.users' : 'false','exclude.special.rates.corpcode' : 'MW1,IBM,EMP,ACC,H77,GEE,TVL,GDY,PEP,ORA,HPQ,DTC,ATT,MEB,TOY,PCW,SAP,T77,SIE,BOE,M11,BOA,WEL,A4Y,MCO,MOD,VZN,EMC,ZG4,G2D,JOH,UAL,UTC,DEL,LAC,LK6,GMC,RAY,MM4,MMB,MMF,MMP','enable.special.rates.corpcode' : '','user.prevent.roomkey.pop' : '0','enable.rewards.basic' : 'true','enable.rewards.silver' : 'true','enable.rewards.gold' : 'false','enable.rewards.platinum' : 'false','enable.users.corpcode' : 'false','enable.users.groupcode' : 'false','browser.useragent' : 'GomezAgent,iPhone,iPad,Silk,BlackBerry,Edge/12,Trident/4.0','enable.concur.users' : 'false','enable.hd.solution' : 'true','enable.domains.US' : 'true','enable.domains.GB' : 'true','enable.domains.DE' : 'false','enable.domains.FR' : 'false','enable.domains.AU' : 'true','enable.domains.CN' : 'false','enable.domains.JP' : 'false','enable.domains.ES' : 'true','enable.domains.BR' : 'false','enable.domains.KR' : 'false'}                 
+		
+};
+</script>
+</div>
+<input id="absolute-uri" type="hidden" value="http://www.marriott.com"/>
+<script type="text/javascript">
+	var msgResources = {
+			closeText : 'close <span class="is-hidden-text">this window</span>'
+			,loadingText : 'Loading…'
+			,printText: 'Print'
+			,nightText: 'night'
+			,nightsText: 'nights'
+			,clearText: 'Clear'
+			,doneText: 'Done'
+			,monthFullList: '["January","February","March","April","May","June","July","August","September","October","November","December"]'
+			,monthShortList: '["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"]'
+			,weekdayFullList: '["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]'
+			,weekdayShortList: '["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]'
+			,prevMonthText: 'Previous month'
+			,nextMonthText: 'Next month'
+			,NewWindowAltText: 'Open in a different browser tab'
+	}
+</script>
+<script src="/miJSPath/N1721286105/bundles/micorelib.js" type="text/javascript"></script>
+<div class="mboxDefault"></div>
+<script>
+				if (typeof mboxCreate !== 'undefined'){
+					mboxCreate('marriott.com_global_controls' );
+				};
+			</script>
+<script type="text/javascript">
+ 
+ if(typeof _satellite != 'undefined'){ _satellite.pageBottom();};
+ 
+ </script>
+<input id="confirmationTracking" name="confirmationTracking" type="hidden" value=""/>
+<input id="omniSiteTrackingOn" name="omniSiteTrackingOn" type="hidden" value="true"/>
+<input id="moduleTrackingOn" name="moduleTrackingOn" type="hidden" value="true"/>
+<input id="siteTrackingReportSuite" name="siteTrackingReportSuite" type="hidden" value="prod"/>
+<input id="omniSiteLocale" name="omniSiteLocale" type="hidden" value="US"/>
+<input id="omniglobalSiteLanguage" name="omniglobalSiteLanguage" type="hidden" value="en"/>
+<input id="isReservationSite" name="isReservationSite" type="hidden" value="true"/>
+<input id="analyze-unspecified-links" name="analyze-unspecified-links" type="hidden" value="false"/>
+<script src="/miJSPath/450328307/bundles/sitecatalystlib.js" type="text/javascript"></script>
+<input id="omniRememAuthen" name="omniRememAuthen" type="hidden" value="false"/>
+<input id="omniCustomPages" type="hidden" value=""/>
+<input id="omniADFTrackFromDate" name="omniADFTrackFromDate" type="hidden" value="09/28/16"/>
+<input id="omniProduct" name="omniProduct" type="hidden" value=";AHNRZ"/>
+<input id="omniBookingPace" name="omniBookingPace" type="hidden" value=""/>
+<input id="omniEvars" name="omniEvars" type="hidden" value="0=,41=US,4=GOV"/>
+<input id="omniProps" name="omniProps" type="hidden" value="0=,5=US,13=09/28/16,14=09/29/16,67=false"/>
+<input id="omniEvents" name="omniEvents" type="hidden" value=",event68"/>
+<input id="iata" name="iata" type="hidden" value=""/>
+<input id="ctc-search-count" type="hidden" value="0"/>
+<script src="/miJSPath/N1687930283/common/js/OmnitureTrackingJS/omniTrackReservations.js" type="text/javascript"></script>
+<input id="personalizedOmniParamList" name="personalizedOmniParamList" type="hidden" value=""/>
+<script src="/miJSPath/1230914371/common/js/OmnitureTrackingJS/omniTrackRun.js" type="text/javascript"></script>
+<!-- Gigya API KEY -->
+<!-- Social Share -->
+<script src="//cdns.gigya.com/js/gigya.js?apiKey=3_M__rJP5AaxFgwpIUXjckNU1Cf7bzbIswIwNURF3Lo-gOFRNxldIolAZc2U3yBDLW&amp;lang=en-us" type="text/javascript"></script>
+<script src="/common/js/account/socialShareRewards.js" type="text/javascript"></script>
+<!-- Social Login -->
+<script src="/miJSPath/1268736978/bundles/dwrall.js" type="text/javascript"></script>
+<script src="/common/js/account/socialLoginRewards.js" type="text/javascript"></script>
+<script src="/miJSPath/N1571594821/bundles/reservationslib.js" type="text/javascript"></script>
+<script src="/miJSPath/N466054382/common/js/reservations/alternateDateFinder.js" type="text/javascript"></script>
+<script src="/miJSPath/N1105620769/common/js/hwsPhotoGallery.js" type="text/javascript"></script>
+<script src="/miJSPath/1961055843/common/js/reservations/cashAndPoints.js" type="text/javascript"></script>
+<script type="text/javascript">
+	googleMap.src = {api: "//maps.googleapis.com/maps/api/js?v=3.exp&client=gme-marriottinternational&libraries=places&signed_in=false&language=en_US&region=US",
+		cluster: "/common/js/map/markerclusterer.min.js",
+		oms: "/common/js/map/oms.min.js",
+		search: "/common/js/map/propertySearchGoogleMap.js"}
+</script>
+<input id="ctc-hotel-name" name="ctc-hotel-name" type="hidden" value="The Ritz-Carlton Reynolds, Lake Oconee"/>
+<input id="ctc-booking-pace" name="ctc-booking-pace" type="hidden" value=""/>
+<input id="ctc-stay-total" name="ctc-stay-total" type="hidden" value=""/>
+<form name="dynamicChat" style="display: none;"></form>
+<input class="cash-points-chat" name="cashPointsRecalculated" type="hidden" value="0"/>
+<input class="cash-points-chat" name="cashPointsUnavailableItinerary" type="hidden" value="0"/>
+</div></body></html>
+<div id="salesforce_code_insert">
+<div id="salesforce_main_insert">
+<!-- Place holder div for main Salesforce LiveAgent functions to enable Chat - executed in Ensighten TMS container -->
+</div>
+<div id="salesforce_callback_insert">
+<!-- Place holder div for main Salesforce Chat button callback functions executed in Ensighten TMS container -->
+</div>
+<div id="salesforce_chat_styles_insert">
+<!-- Place holder div for main Salesforce Chat button styling functions JS code inserted by Ensighten TMS container -->
+</div>
+</div>
+<script src="/miJSPath/N1231508724/bundles/mi_customer_survey.js" type="text/javascript"></script>
+<div id="tagManagement-bodyBottomTags">
+</div>
+
