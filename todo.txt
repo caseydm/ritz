@@ -1,1 +1,2 @@
 1. Fix buildDates() so it goes into next month, rather than 30 days
+2. Add error checking
