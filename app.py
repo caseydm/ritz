@@ -19,7 +19,11 @@ def getSoup(arrive, depart):
     return browser
 
 
-def parseRates(soup):
+def parseRates(soup, year):
+    # year passed to append to res date
+    year = datetime.strptime(year, '%m/%d/%Y')
+    year = year.strftime('%Y')
+
     # get calendar rows
     table = soup.find('table')
     body = table.find('tbody')
@@ -33,7 +37,12 @@ def parseRates(soup):
         for c in cells:
             p = c.find('p')
             spans = p.find_all('span')
-            resDate = spans[1].text + spans[2].text  # reservation date
+
+            # convert date to reader friendly
+            resDate = spans[1].text + spans[2].text + '/' + year  # reservation date
+            resDate = datetime.strptime(resDate, '%m/%d/%Y')
+            resDate = resDate.strftime('%A, %b %d')
+
             price = c.find_all('p')[1].text  # price
             price = price.strip(' \t\n\r')  # price stripped
             ratesDict.append({'date': resDate, 'price': price})
@@ -68,7 +77,7 @@ def getRates():
     # get rates for this month and next month
     for d in dates:
         soup = getSoup(d['arrive'], d['depart'])
-        rates += parseRates(soup)
+        rates += parseRates(soup, d['arrive'])
         time.sleep(2)
 
     return rates
