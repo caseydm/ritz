@@ -6,7 +6,7 @@ import sendgrid
 from sendgrid.helpers.mail import *
 
 
-def getSoup(arrive, depart):
+def get_soup(arrive, depart):
     browser = RoboBrowser(parser='html.parser')
     browser.open('http://www.marriott.com/reservation/availabilitySearch.mi?propertyCode=AHNRZ')
 
@@ -22,7 +22,7 @@ def getSoup(arrive, depart):
     return browser
 
 
-def parseRates(soup, year):
+def parse_rates(soup, year):
     # year passed to append to reservation date
     year = datetime.strptime(year, '%m/%d/%Y')
     year = year.strftime('%Y')
@@ -42,22 +42,22 @@ def parseRates(soup, year):
             spans = p.find_all('span')
 
             # convert date to reader friendly format
-            resDate = spans[1].text + spans[2].text + '/' + year
-            resDate = datetime.strptime(resDate, '%m/%d/%Y')
-            resDate = resDate.strftime('%A, %b %d')
+            res_date = spans[1].text + spans[2].text + '/' + year
+            res_date = datetime.strptime(res_date, '%m/%d/%Y')
+            res_date = res_date.strftime('%A, %b %d')
 
             # reservation cost
             price = c.find_all('p')[1].text
             price = price.strip(' \t\n\r')
-            rates.append({'date': resDate, 'price': price})
+            rates.append({'date': res_date, 'price': price})
 
     return rates
 
 
-def buildDates():
+def build_dates():
     dates = []
     today = datetime.now()
-    nextMonth = today + timedelta(days=30)
+    next_month = today + timedelta(days=30)
 
     # now
     dates.append({
@@ -67,21 +67,21 @@ def buildDates():
 
     # next month
     dates.append({
-        'arrive': nextMonth.strftime('%m/%d/%Y'),
-        'depart': (nextMonth + timedelta(days=1)).strftime('%m/%d/%Y')
+        'arrive': next_month.strftime('%m/%d/%Y'),
+        'depart': (next_month + timedelta(days=1)).strftime('%m/%d/%Y')
     })
 
     return dates
 
 
-def getRates():
-    dates = buildDates()
+def get_rates():
+    dates = build_dates()
     rates = []
 
     # get rates for this month and next month
     for d in dates:
-        soup = getSoup(d['arrive'], d['depart'])
-        rates += parseRates(soup, d['arrive'])
+        soup = get_soup(d['arrive'], d['depart'])
+        rates += parse_rates(soup, d['arrive'])
         time.sleep(2)
 
     # sort rates by date
@@ -90,7 +90,7 @@ def getRates():
     return rates
 
 
-def emailResults(rates):
+def email_results(rates):
     # sendgrid setup
     sg = sendgrid.SendGridAPIClient(apikey=os.environ.get('SENDGRID_API_KEY'))
 
@@ -109,7 +109,7 @@ def emailResults(rates):
 
 
 # run program
-rates = getRates()
+rates = get_rates()
 for rate in rates:
     print(rate['date'], rate['price'])
-emailResults(rates)
+email_results(rates)
