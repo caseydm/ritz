@@ -35,7 +35,7 @@ def parse_rates(soup):
     for item in urls:
         if len(item["class"]) == 1:
             parsed = urlparse(item['href'])
-            links += parse_qs(parsed.query)
+            links.append(parse_qs(parsed.query))
 
     rates = []
 
@@ -117,4 +117,4 @@ def email_results(rates):
 rates = get_rates()
 for rate in rates:
     print(rate['date'], rate['price'])
-email_results(rates)
+# email_results(rates)
