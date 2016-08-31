@@ -1,7 +1,7 @@
 import os
 import time
 from datetime import datetime, timedelta
-from urllib.parse import urlparse, parse_qs
+from urllib.parse import urlparse, parse_qs, urlunparse
 from robobrowser import RoboBrowser
 import sendgrid
 from sendgrid.helpers.mail import *
@@ -24,9 +24,7 @@ def get_soup(arrive, depart):
 
 
 def parse_rates(soup):
-    # refactor by parsing the link in each cell
-
-    # get calendar rows
+    # get calendar links
     table = soup.find('table')
     urls = table.find_all('a', class_='t-no-decor')
 
@@ -35,9 +33,12 @@ def parse_rates(soup):
     # loop through urls and parse each query string
     for item in urls:
         if len(item["class"]) == 1:
-            parsed_url = urlparse(item['href'])
+            # strip newlines and tabs
+            raw_url = item['href'].replace('\n', '').replace('\t', '')
+            parsed_url = urlparse(raw_url)
             query = parse_qs(parsed_url.query)
 
+            # convert date to friendly format
             res_date = query['fromDate'][0]
             res_date = datetime.strptime(res_date, '%m/%d/%y')
             res_date = res_date.strftime('%A, %b %d')
@@ -46,27 +47,8 @@ def parse_rates(soup):
             rates.append({
                 'date': res_date,
                 'price': query['rate'][0],
-                'reservation_link': 'https://marriott.com' + item.text
+                'reservation_link': 'https://marriott.com' + urlunparse(parsed_url)
             })
-
-    print(rates)
-
-    # # get values from each cell
-    # for r in rows:
-    #     cells = r.find_all('a')
-    #     for c in cells:
-    #         p = c.find('p')
-    #         spans = p.find_all('span')
-
-    #         # convert date to reader friendly format
-    #         res_date = spans[1].text + spans[2].text + '/' + year
-    #         res_date = datetime.strptime(res_date, '%m/%d/%Y')
-    #         res_date = res_date.strftime('%A, %b %d')
-
-    #         # reservation cost
-    #         price = c.find_all('p')[1].text
-    #         price = price.strip(' \t\n\r')
-    #         rates.append({'date': res_date, 'price': price})
 
     return rates
 
