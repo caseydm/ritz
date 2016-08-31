@@ -30,14 +30,26 @@ def parse_rates(soup):
     table = soup.find('table')
     urls = table.find_all('a', class_='t-no-decor')
 
-    links = []
+    rates = []
 
+    # loop through urls and parse each query string
     for item in urls:
         if len(item["class"]) == 1:
-            parsed = urlparse(item['href'])
-            links.append(parse_qs(parsed.query))
+            parsed_url = urlparse(item['href'])
+            query = parse_qs(parsed_url.query)
 
-    rates = []
+            res_date = query['fromDate'][0]
+            res_date = datetime.strptime(res_date, '%m/%d/%y')
+            res_date = res_date.strftime('%A, %b %d')
+
+            # append data to rates list
+            rates.append({
+                'date': res_date,
+                'price': query['rate'][0],
+                'reservation_link': 'https://marriott.com' + item.text
+            })
+
+    print(rates)
 
     # # get values from each cell
     # for r in rows:
