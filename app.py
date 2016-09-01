@@ -47,7 +47,7 @@ def parse_rates(soup):
             rates.append({
                 'date': res_date,
                 'price': query['rate'][0],
-                'reservation_link': 'https://marriott.com' + urlunparse(parsed_url)
+                'link': 'https://marriott.com' + urlunparse(parsed_url)
             })
 
     return rates
@@ -83,6 +83,15 @@ def get_rates():
         rates += parse_rates(soup)
         time.sleep(2)
 
+    # remove duplicates
+    filtered = []
+
+    for i in range(0, len(rates)):
+        if rates[i] not in rates[i + 1:]:
+            filtered.append(rates[i])
+
+    rates = filtered
+
     # sort rates by date
     rates.sort(key=lambda x: datetime.strptime(x['date'], '%A, %b %d'))
 
@@ -96,8 +105,10 @@ def email_results(rates):
     # message
     message = 'Available dates for Ritz Lake Oconee:<br><br>'
     for rate in rates:
-        message += rate['date'] + ': ' + rate['price'] + '<br>'
-
+        message += '<b>Date:</b> {} <br><b>Rate:</b> {}'.format(
+            rate['date'],
+            '<a href=' + rate['link'] + '>' + rate['price'] + '</a><br><br>'
+        )
     from_email = Email('casey@caseym.me')
     subject = 'Ritz Hotel Rates'
     to_email = Email('caseym@gmail.com')
@@ -110,5 +121,5 @@ def email_results(rates):
 # run program
 rates = get_rates()
 for rate in rates:
-    print(rate['date'], rate['price'])
-# email_results(rates)
+    print(rate['date'], rate['price'], rate['link'])
+email_results(rates)
