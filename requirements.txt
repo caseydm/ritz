@@ -1,5 +1,8 @@
 beautifulsoup4==4.4.1
 html5lib==0.9999999
+py==1.4.31
+pytest==3.0.1
+python-dateutil==2.5.3
 python-http-client==2.2.1
 requests==2.10.0
 robobrowser==0.5.3

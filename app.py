@@ -1,6 +1,7 @@
 import os
 import time
 from datetime import datetime, timedelta
+from dateutil import relativedelta
 from urllib.parse import urlparse, parse_qs, urlunparse
 from robobrowser import RoboBrowser
 import sendgrid
@@ -56,7 +57,7 @@ def parse_rates(soup):
 def build_dates():
     dates = []
     today = datetime.now()
-    next_month = today + timedelta(days=30)
+    next_month = today + relativedelta.relativedelta(months=1)
 
     # now
     dates.append({
