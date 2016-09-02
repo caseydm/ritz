@@ -1,2 +1,1 @@
-1. Add exception handling
-2. Add tests!
+1. Add exception handling for web site not available, data not parsed correctly
