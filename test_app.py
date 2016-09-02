@@ -1,9 +1,11 @@
-from datetime import datetime
+from freezegun import freeze_time
 from app import build_dates
 
-def test_dates(monkeypatch):
-    monkeypatch.setattr(datetime.now(), 'expanduser', mockreturn)
-    dates = build_dates()
-    assert datetime.now() == FAKETIME
 
-# today = datetime(2016, 6, 30)
+@freeze_time('2016-07-01')
+def test_dates():
+    dates = build_dates()
+    assert dates[0]['arrive'] == '07/01/2016'
+    assert dates[0]['depart'] == '07/02/2016'
+    assert dates[1]['arrive'] == '08/01/2016'
+    assert dates[1]['depart'] == '08/02/2016'

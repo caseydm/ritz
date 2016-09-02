@@ -120,7 +120,8 @@ def email_results(rates):
 
 
 # run program
-rates = get_rates()
-for rate in rates:
-    print(rate['date'], rate['price'], rate['link'])
-email_results(rates)
+if __name__ == '__main__':
+    rates = get_rates()
+    for rate in rates:
+        print(rate['date'], rate['price'], rate['link'])
+    email_results(rates)
