@@ -35,7 +35,7 @@ def parse_rates(soup):
     for item in urls:
         if len(item["class"]) == 1:
             # strip newlines and tabs
-            raw_url = item['href'].replace('\n', '').replace('\t', '')
+            raw_url = item['href'].replace('\n', '').replace('\t', '').replace(' ', '')
             parsed_url = urlparse(raw_url)
             query = parse_qs(parsed_url.query)
 
