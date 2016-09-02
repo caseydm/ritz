@@ -1,3 +1,2 @@
-1. Fix build_dates() so it goes into next month, rather than 30 days
-2. Add exception handling
-3. Add tests!
+1. Add exception handling
+2. Add tests!
