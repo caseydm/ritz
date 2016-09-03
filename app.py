@@ -123,9 +123,9 @@ def email_results(rates):
             rate['date'],
             '<a href=' + rate['link'] + '>' + rate['price'] + '</a><br><br>'
         )
-    from_email = Email('casey@caseym.me')
+    from_email = Email(os.environ.get('FROM_EMAIL'))
     subject = 'Ritz Hotel Rates'
-    to_email = Email('caseym@gmail.com')
+    to_email = Email(os.environ.get('TO_EMAIL'))
     content = Content('text/html', message)
     mail = Mail(from_email, subject, to_email, content)
     response = sg.client.mail.send.post(request_body=mail.get())
