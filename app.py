@@ -1,11 +1,23 @@
 import os
 import time
+import sys
 from datetime import datetime, timedelta
 from dateutil import relativedelta
 from urllib.parse import urlparse, parse_qs, urlunparse
 from robobrowser import RoboBrowser
 import sendgrid
 from sendgrid.helpers.mail import *
+
+
+def main():
+    try:
+        rates = get_rates()
+        for rate in rates:
+            print(rate['date'], rate['price'], rate['link'])
+        email_results(rates)
+    except AttributeError:
+        print('attribute error')
+        sys.exit(1)
 
 
 def get_soup(arrive, depart):
@@ -21,6 +33,7 @@ def get_soup(arrive, depart):
 
     # submit form
     browser.submit_form(form)
+
     return browser
 
 
@@ -121,7 +134,4 @@ def email_results(rates):
 
 # run program
 if __name__ == '__main__':
-    rates = get_rates()
-    for rate in rates:
-        print(rate['date'], rate['price'], rate['link'])
-    email_results(rates)
+    main()
