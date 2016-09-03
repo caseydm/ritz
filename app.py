@@ -14,7 +14,7 @@ def main():
         rates = get_rates()
         for rate in rates:
             print(rate['date'], rate['price'], rate['link'])
-        # email_results(rates)
+        email_results(rates)
     except (AttributeError, TypeError) as e:
         print('Error: {}'.format(e))
         sys.exit(1)
