@@ -12,8 +12,6 @@ from sendgrid.helpers.mail import *
 def main():
     try:
         rates = get_rates()
-        for rate in rates:
-            print(rate['date'], rate['price'], rate['link'])
         email_results(rates)
     except (AttributeError, TypeError) as e:
         print('Error: {}'.format(e))
@@ -129,7 +127,6 @@ def email_results(rates):
     content = Content('text/html', message)
     mail = Mail(from_email, subject, to_email, content)
     response = sg.client.mail.send.post(request_body=mail.get())
-    print(response.status_code)
 
 
 # run program
